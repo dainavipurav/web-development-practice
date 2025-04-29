@@ -1,7 +1,19 @@
 import express from "express";
 
 var app = express();
-const port = 6000;
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("<h1>Home Page</h1>");
+});
+
+app.get("/contact", (req, res) => {
+  res.send("<h1>Contact number : 9619380028</h1>");
+});
+
+app.get("/about", (req, res) => {
+  res.send("<h1>I'm a Flutter developer</h1>");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on ${port} port.`);
